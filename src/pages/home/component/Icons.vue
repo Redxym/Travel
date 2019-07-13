@@ -1,6 +1,10 @@
 <template>
   <div class="icons">
+<<<<<<< HEAD
     <swiper>
+=======
+    <swiper :options="swiperOption">
+>>>>>>> index-recommend
       <swiper-slide v-for="(page, index) of pages" :key="index">
       <div class="icon" v-for="item of page" :key="item.id">
         <div class="icon-img">
@@ -16,6 +20,7 @@
 <script>
 export default {
   name: 'HomeIcons',
+<<<<<<< HEAD
   data () {
     return {
       iconList: [{
@@ -63,13 +68,28 @@ export default {
         imgUrl: 'http://s.qunarzz.com/homenode/images/touchheader/aroundtravel.png',
         desc: '周边短途'
       }]
+=======
+  props: {
+    list: Array
+  },
+  data () {
+    return {
+      swiperOption: {
+        autoplay: false
+      }
+>>>>>>> index-recommend
     }
   },
   computed: {
     pages () {
       const pages = []
+<<<<<<< HEAD
       this.iconList.forEach((item, index) => {
         const page = Math.floor(index / 10)
+=======
+      this.list.forEach((item, index) => {
+        const page = Math.floor(index / 8)
+>>>>>>> index-recommend
         if (!pages[page]) {
           pages[page] = []
         }
@@ -88,12 +108,21 @@ export default {
     overflow: hidden
     height: 0
     padding-bottom: 50%
+<<<<<<< HEAD
     background: pink
+=======
+  .icons
+    margin-top: .1rem
+>>>>>>> index-recommend
     .icon
       position: relative
       overflow: hidden
       float: left
+<<<<<<< HEAD
       width: 20%
+=======
+      width: 25%
+>>>>>>> index-recommend
       height: 0
       padding-bottom: 25%
       background: #fff
