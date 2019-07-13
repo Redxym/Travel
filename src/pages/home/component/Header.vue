@@ -16,14 +16,10 @@
 
 <script>
 export default {
-<<<<<<< HEAD
-  name: 'HomeHeader'
-=======
   name: 'HomeHeader',
   props: {
     city: String
   }
->>>>>>> index-recommend
 }
 </script>
 

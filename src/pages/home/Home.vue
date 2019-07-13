@@ -1,16 +1,10 @@
 <template>
   <div>
-<<<<<<< HEAD
-    <home-header></home-header>
-    <home-swiper></home-swiper>
-    <home-icons></home-icons>
-=======
     <home-header :city="city"></home-header>
     <home-swiper :list="swiperList"></home-swiper>
     <home-icons :list="iconList"></home-icons>
     <home-recommend :list="recommendList"></home-recommend>
     <home-weekend :list="weekendList"></home-weekend>
->>>>>>> index-recommend
   </div>
 </template>
 
@@ -18,21 +12,15 @@
 import HomeHeader from './component/Header'
 import HomeSwiper from './component/Swiper'
 import HomeIcons from './component/Icons'
-<<<<<<< HEAD
-=======
 import HomeRecommend from './component/Recommend'
 import HomeWeekend from './component/Weekend'
 import axios from 'axios'
->>>>>>> index-recommend
 
 export default {
   name: 'Home',
   components: {
     HomeHeader: HomeHeader,
     HomeSwiper,
-<<<<<<< HEAD
-    HomeIcons
-=======
     HomeIcons,
     HomeRecommend,
     HomeWeekend
@@ -65,7 +53,6 @@ export default {
   },
   mounted () {
     this.getHomeInfo()
->>>>>>> index-recommend
   }
 }
 </script>
