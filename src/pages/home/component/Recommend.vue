@@ -2,7 +2,7 @@
   <div>
   <div class="title">热销推荐</div>
   <ul>
-    <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+    <li class="item border-bottom" v-for="item of list" :key="item.id">
       <img class="item-img" :src="item.imgUrl">
       <div class="item-info">
         <p class="item-title">{{item.title}}</p>
@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1802/40/40b2075640718d7a3.img.png_256x160_778f7d0b.png',
-        title: '天门山国家森林公园',
-        desc: '穿越云霄的旅行'
-      }, {
-        id: '0002',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1612/14/14bef79602a7780a3.water.jpg_256x160_3424b8ae.jpg',
-        title: ' 张家界',
-        desc: '湘鄂渝黔革命根据地的发源地和中心区域'
-      }, {
-        id: '0003',
-        imgUrl: 'https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/646e244028cb286586e2cb0aa9dd63dc.jpg',
-        title: '丽江',
-        desc: '一路向南，丽江的故事等你倾听'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
